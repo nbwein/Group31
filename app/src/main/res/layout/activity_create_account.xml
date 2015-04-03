@@ -1,0 +1,109 @@
+<!--<merge xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--xmlns:tools="http://schemas.android.com/tools"-->
+    <!--tools:context=".SignUpActivity" >-->
+
+    <!-- Login form -->
+
+    <!--<ScrollView-->
+        <!--android:id="@+id/signup_form"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:background = "#FFA500">-->
+
+        <RelativeLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background = "#ffff9a34">
+
+            <Button
+                android:id="@+id/action_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="32dp"
+                android:paddingRight="32dp"
+                android:text="@string/signup"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="106dp" />
+
+            <EditText
+                android:id="@+id/password2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/prompt_password_again"
+                android:inputType="textPassword"
+                android:background="#FFFFFF"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:layout_centerVertical="true"
+                android:layout_alignRight="@+id/action_button"
+                android:layout_alignEnd="@+id/action_button"
+                android:layout_alignLeft="@+id/action_button"
+                android:layout_alignStart="@+id/action_button"
+                android:layout_marginBottom="30dp"/>
+
+            <EditText
+                android:id="@+id/password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/prompt_password"
+                android:inputType="textPassword"
+                android:background="#FFFFFF"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:layout_above="@+id/password2"
+                android:layout_alignRight="@+id/password2"
+                android:layout_alignEnd="@+id/password2"
+                android:layout_alignLeft="@+id/password2"
+                android:layout_alignStart="@+id/password2"
+                android:layout_marginBottom="30dp"/>
+
+            <EditText
+                android:id="@+id/username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/prompt_username"
+                android:inputType="textEmailAddress"
+                android:background="#FFFFFF"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:layout_above="@+id/password"
+                android:layout_alignLeft="@+id/password"
+                android:layout_alignStart="@+id/password"
+                android:layout_marginBottom="30dp"
+                android:layout_alignRight="@+id/password"
+                android:layout_alignEnd="@+id/password"
+                android:layout_marginTop="30dp"
+                android:layout_alignParentEnd="false"
+                android:layout_alignParentStart="false" />
+
+            <EditText
+                android:id="@+id/playscription_code"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Playscription code"
+                android:inputType="textEmailAddress"
+                android:background="#FFFFFF"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:layout_above="@+id/username"
+                android:layout_alignLeft="@+id/username"
+                android:layout_alignStart="@+id/username"
+                android:layout_alignRight="@+id/username"
+                android:layout_alignEnd="@+id/username" />
+        </RelativeLayout>
+            <!--&lt;!&ndash;style="@style/LoginFormContainer"&ndash;&gt;<![CDATA[-->
+            <!--android:orientation="vertical" >-->
+
+            <!--]]>&lt;!&ndash;android:imeActionId="@+id/edittext_action_signup"&ndash;&gt;<![CDATA[-->
+                <!--android:background="#FFFFFF"-->
+                <!--android:imeActionLabel="@string/signup"-->
+                <!--android:imeOptions="actionUnspecified" />-->
+
+            <!--]]>-->
+<!--</RelativeLayout>-->
+    <!--</ScrollView>-->
+
+<!--</merge>-->
