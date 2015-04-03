@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/Users/EKwong/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/21.0.3/support-annotations-21.0.3.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="4b74cefe1f0c1b819e7260c8627a14674e37fd35">
+        <dex dex="/Users/EKwong/Developer/350_project/Group31/app/build/intermediates/pre-dexed/debug/support-annotations-21.0.3-993b5ec2facfbed8dc03ccdc8d6d383aa8b6a3f2.jar" />
+    </item>
+    <item
+        jar="/Users/EKwong/Developer/350_project/Group31/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="2c91c949a45a21cdecf26e03951e46c7beec9ad8">
+        <dex dex="/Users/EKwong/Developer/350_project/Group31/app/build/intermediates/pre-dexed/debug/classes-e426ab274d461799aeb344d76fac4ed41b3d07f4.jar" />
+    </item>
+    <item
+        jar="/Users/EKwong/Developer/350_project/Group31/app/libs/bolts-android-1.1.4.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="129874135e6081269ace2312092031558865de12">
+        <dex dex="/Users/EKwong/Developer/350_project/Group31/app/build/intermediates/pre-dexed/debug/bolts-android-1.1.4-7b00d7eb2fae99dc392b9d073b36e98234e0bebf.jar" />
+    </item>
+    <item
+        jar="/Users/EKwong/Developer/350_project/Group31/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/libs/internal_impl-21.0.3.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="01ec05bfbafcc07646ba813000bf2ef11742dd03">
+        <dex dex="/Users/EKwong/Developer/350_project/Group31/app/build/intermediates/pre-dexed/debug/internal_impl-21.0.3-ae0b060e9114e9b2b8edee8649dc34442b669843.jar" />
+    </item>
+    <item
+        jar="/Users/EKwong/Developer/350_project/Group31/app/libs/Parse-1.9.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="5811138d4e6cb9d45030e133ef1a61b935154c3a">
+        <dex dex="/Users/EKwong/Developer/350_project/Group31/app/build/intermediates/pre-dexed/debug/Parse-1.9.0-cd429afa648d6a63075f40d78e8cf5b568b66a35.jar" />
+    </item>
+    <item
+        jar="/Users/EKwong/Developer/350_project/Group31/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="81d42bf983a8741f4888a6e333e454e4a5e0eeb7">
+        <dex dex="/Users/EKwong/Developer/350_project/Group31/app/build/intermediates/pre-dexed/debug/classes-0d62934bcd80d55c483bec4b414b0505c965d631.jar" />
+    </item>
+
+</items>

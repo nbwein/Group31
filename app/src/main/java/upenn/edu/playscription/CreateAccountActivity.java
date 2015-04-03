@@ -98,29 +98,31 @@ public class CreateAccountActivity extends ActionBarActivity {
         }
 
         // Set up a progress dialog
-        final ProgressDialog dialog = new ProgressDialog(CreateAccountActivity.this);
-        dialog.setMessage(getString(R.string.progress_signup));
-        dialog.show();
+//        final ProgressDialog dialog = new ProgressDialog(CreateAccountActivity.this);
+//        dialog.setMessage(getString(R.string.progress_signup));
+//        dialog.show();
 
         // Set up a new Parse user
         ParseObject user = new ParseObject("User");
         user.put("username", username);
         user.put("password", password);
-        user.saveInBackground(new SaveCallback() {
-            @Override
-            public void done(ParseException e) {
-                dialog.dismiss();
-                if (e != null) {
-                    // Show the error message
-                    Toast.makeText(CreateAccountActivity.this, e.getMessage(), Toast.LENGTH_LONG).show();
-                } else {
-                    // Start an intent for the dispatch activity
-                    Intent intent = new Intent(CreateAccountActivity.this, DashboardActivity.class);
-                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
-                    startActivity(intent);
-                }
-            }
-        });
+        user.saveInBackground();
+        Toast.makeText(CreateAccountActivity.this, "Account created", Toast.LENGTH_LONG).show();
+//        user.saveInBackground(new SaveCallback() {
+//            @Override
+//            public void done(ParseException e) {
+//                dialog.dismiss();
+//                if (e != null) {
+//                    // Show the error message
+//                    Toast.makeText(CreateAccountActivity.this, e.getMessage(), Toast.LENGTH_LONG).show();
+//                } else {
+//                    // Start an intent for the dispatch activity
+//                    Intent intent = new Intent(CreateAccountActivity.this, MainActivity.class);
+//                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+//                    startActivity(intent);
+//                }
+//            }
+//        });
 
         // Call the Parse signup method
 //        user.signUpInBackground(new SignUpCallback() {
