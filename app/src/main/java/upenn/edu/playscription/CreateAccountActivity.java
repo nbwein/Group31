@@ -31,8 +31,8 @@ public class CreateAccountActivity extends ActionBarActivity {
 
         setContentView(R.layout.activity_create_account);
 
-        // Enable Local Datastore.
-        Parse.enableLocalDatastore(this);
+//        // Enable Local Datastore.
+//        Parse.enableLocalDatastore(this);
 
         Parse.initialize(this, "8SD5YOQ9WTDsThTnsG5vRaaZptHqpcYdz6tLelQp", "HhBMNz9uLujfeLtnAxrnrJ9sa9KMgvqmDq7w664l");
 
@@ -107,7 +107,7 @@ public class CreateAccountActivity extends ActionBarActivity {
         user.put("username", username);
         user.put("password", password);
         user.saveInBackground();
-        Toast.makeText(CreateAccountActivity.this, "Account created", Toast.LENGTH_LONG).show();
+//        Toast.makeText(CreateAccountActivity.this, "Account created", Toast.LENGTH_LONG).show();
 //        user.saveInBackground(new SaveCallback() {
 //            @Override
 //            public void done(ParseException e) {
@@ -116,10 +116,10 @@ public class CreateAccountActivity extends ActionBarActivity {
 //                    // Show the error message
 //                    Toast.makeText(CreateAccountActivity.this, e.getMessage(), Toast.LENGTH_LONG).show();
 //                } else {
-//                    // Start an intent for the dispatch activity
-//                    Intent intent = new Intent(CreateAccountActivity.this, MainActivity.class);
+                    // Start an intent for the dispatch activity
+                    Intent intent = new Intent(CreateAccountActivity.this, DashboardActivity.class);
 //                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
-//                    startActivity(intent);
+                    startActivity(intent);
 //                }
 //            }
 //        });

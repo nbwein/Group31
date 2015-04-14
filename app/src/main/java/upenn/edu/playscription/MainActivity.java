@@ -36,8 +36,8 @@ public class MainActivity extends ActionBarActivity {
         createAccountButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //Intent i = new Intent(context, CreateAccountActivity.class);
-                //startActivity(i);
+                Intent i = new Intent(context, CreateAccountActivity.class);
+                startActivity(i);
             }
         });
 
@@ -54,11 +54,11 @@ public class MainActivity extends ActionBarActivity {
                 try {
                     // If password and username are in database, go to DashboardActivity.
                     if (users.count() == 1 && users.getFirst().get("password").equals(password)) {
-                        Toast toast = Toast.makeText(context, "It worked!", Toast.LENGTH_LONG);
-                        toast.show();
-                        //Intent i = new Intent(context, DashboardActivity.class);
-                        //i.putExtra("Username:", username);
-                        //startActivity(i);
+//                        Toast toast = Toast.makeText(context, "It worked!", Toast.LENGTH_LONG);
+//                        toast.show();
+                        Intent i = new Intent(context, DashboardActivity.class);
+                        i.putExtra("Username:", username);
+                        startActivity(i);
                     }
                     // Else, give user an error message
                     else {
