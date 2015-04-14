@@ -30,18 +30,18 @@
         <dex dex="/Users/Nick/Documents/Sophomore/CIS 350/Playscription/Group31/app/build/intermediates/pre-dexed/debug/internal_impl-21.0.3-7f2f1f36e5f51300db64b386743dc333a313d974.jar" />
     </item>
     <item
-        jar="/Users/Nick/Documents/Sophomore/CIS 350/Playscription/Group31/app/libs/Parse-1.9.0.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="5811138d4e6cb9d45030e133ef1a61b935154c3a">
-        <dex dex="/Users/Nick/Documents/Sophomore/CIS 350/Playscription/Group31/app/build/intermediates/pre-dexed/debug/Parse-1.9.0-a7317c2fd16edb3279614da0076ed01145d73c0f.jar" />
-    </item>
-    <item
         jar="/Users/Nick/Documents/Sophomore/CIS 350/Playscription/Group31/app/libs/bolts-android-1.1.4.jar"
         jumboMode="false"
         revision="21.1.2"
         sha1="129874135e6081269ace2312092031558865de12">
         <dex dex="/Users/Nick/Documents/Sophomore/CIS 350/Playscription/Group31/app/build/intermediates/pre-dexed/debug/bolts-android-1.1.4-0564ad8524f728291bfd3e1e145ebd3af2ce5c45.jar" />
+    </item>
+    <item
+        jar="/Users/Nick/Documents/Sophomore/CIS 350/Playscription/Group31/app/libs/Parse-1.9.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="5811138d4e6cb9d45030e133ef1a61b935154c3a">
+        <dex dex="/Users/Nick/Documents/Sophomore/CIS 350/Playscription/Group31/app/build/intermediates/pre-dexed/debug/Parse-1.9.0-a7317c2fd16edb3279614da0076ed01145d73c0f.jar" />
     </item>
 
 </items>
