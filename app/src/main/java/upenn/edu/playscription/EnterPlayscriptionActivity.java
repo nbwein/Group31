@@ -17,7 +17,7 @@ public class EnterPlayscriptionActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_enter_playscription);
-        curUser = getIntent().getStringExtra("username");
+        curUser = getIntent().getStringExtra("USERNAME");
         Button submit = (Button) findViewById(R.id.submit_playscription);
         submit.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {

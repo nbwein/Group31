@@ -16,6 +16,7 @@ import java.util.HashMap;
 import java.util.Date;
 import java.util.Map;
 import java.util.ArrayList;
+import org.json.JSONObject;
 
 import com.jjoe64.graphview.GraphView;
 import com.jjoe64.graphview.series.LineGraphSeries;
@@ -27,6 +28,8 @@ public class StatsActivity extends ActionBarActivity {
 
     private String username;
     private Date currDate;
+    private Date[] loggedWeightDates;
+    private double[] loggedWeights;
     private HashMap<Date, Double> dateToWeight;
 
     @Override
