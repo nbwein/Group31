@@ -1,6 +1,7 @@
 package upenn.edu.playscription;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.graphics.drawable.ColorDrawable;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.ActionBar;
@@ -18,6 +19,8 @@ import android.view.ViewGroup;
 import android.support.v4.widget.DrawerLayout;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
+import android.widget.Button;
+import android.util.Log;
 
 
 public class DashboardActivity extends ActionBarActivity
@@ -32,11 +35,18 @@ public class DashboardActivity extends ActionBarActivity
      * Used to store the last screen title. For use in {@link #restoreActionBar()}.
      */
     private CharSequence mTitle;
+    private Button viewStatsbutton;
+    private Button logWeightbutton;
+    private String username;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.dashboard_layout);
+
+        username = getIntent().getStringExtra("Username:");
+
+        final Context context = this;
 
         mNavigationDrawerFragment = (NavigationDrawerFragment)
                 getSupportFragmentManager().findFragmentById(R.id.navigation_drawer);
@@ -46,6 +56,28 @@ public class DashboardActivity extends ActionBarActivity
         mNavigationDrawerFragment.setUp(
                 R.id.navigation_drawer,
                 (DrawerLayout) findViewById(R.id.drawer_layout));
+
+        viewStatsbutton = (Button) findViewById(R.id.view_stats);
+        viewStatsbutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(context, StatsActivity.class);
+                i.putExtra("USERNAME", username);
+                startActivity(i);
+            }
+        });
+
+        logWeightbutton = (Button) findViewById(R.id.log_weight);
+        logWeightbutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(context, StatsActivity.class);
+                i.putExtra("USERNAME", username);
+                startActivity(i);
+            }
+        });
+
+
     }
 
     @Override

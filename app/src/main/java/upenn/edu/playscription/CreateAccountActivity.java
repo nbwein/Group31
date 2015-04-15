@@ -17,6 +17,9 @@ import com.parse.ParseException;
 import com.parse.ParseUser;
 import com.parse.SignUpCallback;
 import com.parse.*;
+import java.util.Date;
+
+import java.util.HashMap;
 
 
 public class CreateAccountActivity extends ActionBarActivity {
@@ -102,10 +105,22 @@ public class CreateAccountActivity extends ActionBarActivity {
 //        dialog.setMessage(getString(R.string.progress_signup));
 //        dialog.show();
 
+//        HashMap<Date, Double> map = new HashMap<Date, Double>();
+//        Date d = new Date();
+//        map.put(d, 87.0);
+//        Date e = new Date();
+//        map.put(e, 94.0);
+//        Date f = new Date();
+//        map.put(f, 91.0);
+//        Date g = new Date();
+//        map.put(g, 86.0);
+//        Date h = new Date();
+//        map.put(h, 84.0);
         // Set up a new Parse user
         ParseObject user = new ParseObject("User");
         user.put("username", username);
         user.put("password", password);
+//        user.put("dateToWeight", map);
         user.saveInBackground();
 //        Toast.makeText(CreateAccountActivity.this, "Account created", Toast.LENGTH_LONG).show();
 //        user.saveInBackground(new SaveCallback() {
@@ -118,6 +133,7 @@ public class CreateAccountActivity extends ActionBarActivity {
 //                } else {
                     // Start an intent for the dispatch activity
                     Intent intent = new Intent(CreateAccountActivity.this, DashboardActivity.class);
+                    intent.putExtra("USERNAME", username);
 //                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
                     startActivity(intent);
 //                }
