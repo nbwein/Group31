@@ -11,13 +11,11 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.EditText;
 import android.widget.Toast;
-
 import com.parse.Parse;
 import com.parse.ParseException;
 import com.parse.ParseObject;
 import com.parse.ParseQuery;
 import com.parse.ParseUser;
-
 
 public class MainActivity extends ActionBarActivity {
 
@@ -26,12 +24,15 @@ public class MainActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // Enable Local Datastore.
+        // Enable local datastore and initialize Parse.
         Parse.enableLocalDatastore(this);
-        Parse.initialize(this, "8SD5YOQ9WTDsThTnsG5vRaaZptHqpcYdz6tLelQp", "HhBMNz9uLujfeLtnAxrnrJ9sa9KMgvqmDq7w664l");
+        Parse.initialize(this, "8SD5YOQ9WTDsThTnsG5vRaaZptHqpcYdz6tLelQp", 
+            "HhBMNz9uLujfeLtnAxrnrJ9sa9KMgvqmDq7w664l");
 
         final Context context = this;
 
+        // Create account button starts a new CreateAccountActivity in order to 
+        // create a new account.
         Button createAccountButton = (Button) findViewById(R.id.button);
         createAccountButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -41,6 +42,11 @@ public class MainActivity extends ActionBarActivity {
             }
         });
 
+        // Login button checks the username and password the user entered into 
+        // the EditTexts.
+        // If they are both valid, a new DashboardActivity is created and passed 
+        // the user's username.
+        // Else, an error message is given.
         Button loginButton = (Button) findViewById(R.id.button2);
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -54,8 +60,6 @@ public class MainActivity extends ActionBarActivity {
                 try {
                     // If password and username are in database, go to DashboardActivity.
                     if (users.count() == 1 && users.getFirst().get("password").equals(password)) {
-//                        Toast toast = Toast.makeText(context, "It worked!", Toast.LENGTH_LONG);
-//                        toast.show();
                         Intent i = new Intent(context, DashboardActivity.class);
                         i.putExtra("Username:", username);
                         startActivity(i);
@@ -73,29 +77,4 @@ public class MainActivity extends ActionBarActivity {
             }
         });
     }
-
-/*
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
-    }
-*/
-/*
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
-    }
-*/
 }

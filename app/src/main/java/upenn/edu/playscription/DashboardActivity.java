@@ -112,6 +112,9 @@ public class DashboardActivity extends ActionBarActivity
                 break;
             case 4:
                 mTitle = getString(R.string.title_section4);
+                Intent i = new Intent(DashboardActivity.this, ViewMessagesActivity.class);
+                i.putExtra("USERNAME", username);
+                startActivity(i);
                 break;
             case 5:
                 mTitle = getString(R.string.title_section5);
