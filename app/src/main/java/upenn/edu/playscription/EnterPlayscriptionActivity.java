@@ -1,5 +1,6 @@
 package upenn.edu.playscription;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -12,17 +13,37 @@ import com.parse.*;
 public class EnterPlayscriptionActivity extends ActionBarActivity {
     private boolean dailyReminders = false;
     private String curUser;
+    private EditText activityEditText;
+    private EditText durationEditText;
+    private EditText frequencyEditText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_enter_playscription);
         curUser = getIntent().getStringExtra("USERNAME");
+        activityEditText = (EditText) findViewById(R.id.activity_type);
+        durationEditText = (EditText) findViewById(R.id.duration);
+        frequencyEditText = (EditText) findViewById(R.id.frequency);
+
         Button submit = (Button) findViewById(R.id.submit_playscription);
         submit.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-                ParseQuery<ParseObject> query = ParseQuery.getQuery("User");
-                query.whereEqualTo("username", curUser);
+                String activityType = activityEditText.getText().toString().trim();
+                String durationString = durationEditText.getText().toString().trim();
+                String frequencyString = frequencyEditText.getText().toString().trim();
+                int duration = Integer.parseInt(durationString);
+                int frequency = Integer.parseInt(frequencyString);
+                ParseObject playscription = new ParseObject("Playscription");
+                playscription.put("username", curUser);
+                playscription.put("activityType", activityType);
+                playscription.put("duration", duration);
+                playscription.put("frequency", frequency);
+                playscription.put("dailyReminder", dailyReminders);
+                playscription.saveInBackground();
+                Intent intent = new Intent(EnterPlayscriptionActivity.this, DashboardActivity.class);
+                intent.putExtra("USERNAME", curUser);
+                startActivity(intent);
             }
         });
     }
