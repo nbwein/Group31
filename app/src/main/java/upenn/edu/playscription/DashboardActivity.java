@@ -37,6 +37,7 @@ public class DashboardActivity extends ActionBarActivity
     private CharSequence mTitle;
     private Button viewStatsbutton;
     private Button logWeightbutton;
+    private Button logActivitybutton;
     private Button addPrescriptionButton;
     private String username;
 
@@ -63,6 +64,16 @@ public class DashboardActivity extends ActionBarActivity
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(context, StatsActivity.class);
+                i.putExtra("USERNAME", username);
+                startActivity(i);
+            }
+        });
+
+        logActivitybutton = (Button) findViewById(R.id.log_activity);
+        logActivitybutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(context, LogActivityActivity.class);
                 i.putExtra("USERNAME", username);
                 startActivity(i);
             }

@@ -4,8 +4,40 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
-    tools:context="com.example.drewfisher.playscription.LogActivity">
+    android:background="@android:color/white"
+    tools:context=".LogActivityActivity">
 
 
+    <EditText
+        android:layout_width="275dp"
+        android:layout_height="40dp"
+        android:id="@+id/activityTypeEditText"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/textbox_background"
+        android:hint="activity type"
+        android:layout_marginTop="40dp"
+        android:gravity="center" />
 
+    <EditText
+        android:layout_width="275dp"
+        android:layout_height="40dp"
+        android:id="@+id/durationEditText"
+        android:layout_below="@+id/activityTypeEditText"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/textbox_background"
+        android:hint="duration"
+        android:layout_marginTop="40dp"
+        android:gravity="center"/>
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="37dp"
+        android:id="@+id/submit_activity"
+        android:layout_below="@+id/durationEditText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/done_button"
+        android:onClick="submitActivity"
+        style="?android:attr/borderlessButtonStyle"/>
 </RelativeLayout>
