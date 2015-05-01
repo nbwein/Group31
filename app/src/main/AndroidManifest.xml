@@ -67,6 +67,10 @@
             android:name=".LogActivityActivity"
             android:label="Playscription" >
         </activity>
+        <activity
+            android:name=".LogWeightActivity"
+            android:label="Playscription" >
+        </activity>
 
     </application>
 

@@ -105,17 +105,6 @@ public class CreateAccountActivity extends ActionBarActivity {
 //        dialog.setMessage(getString(R.string.progress_signup));
 //        dialog.show();
 
-//        HashMap<Date, Double> map = new HashMap<Date, Double>();
-//        Date d = new Date();
-//        map.put(d, 87.0);
-//        Date e = new Date();
-//        map.put(e, 94.0);
-//        Date f = new Date();
-//        map.put(f, 91.0);
-//        Date g = new Date();
-//        map.put(g, 86.0);
-//        Date h = new Date();
-//        map.put(h, 84.0);
         // Set up a new Parse user
         ParseObject user = new ParseObject("User");
         user.put("username", username);

@@ -46,7 +46,7 @@ public class DashboardActivity extends ActionBarActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.dashboard_layout);
 
-        username = getIntent().getStringExtra("Username:");
+        username = getIntent().getStringExtra("USERNAME");
 
         final Context context = this;
 
@@ -83,9 +83,9 @@ public class DashboardActivity extends ActionBarActivity
         logWeightbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                Intent i = new Intent(context, EnterWeightActivity.class);
-//                i.putExtra("USERNAME", username);
-//                startActivity(i);
+                Intent i = new Intent(context, LogWeightActivity.class);
+                i.putExtra("USERNAME", username);
+                startActivity(i);
             }
         });
 

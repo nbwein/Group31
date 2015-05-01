@@ -61,7 +61,7 @@ public class MainActivity extends ActionBarActivity {
                     // If password and username are in database, go to DashboardActivity.
                     if (users.count() == 1 && users.getFirst().get("password").equals(password)) {
                         Intent i = new Intent(context, DashboardActivity.class);
-                        i.putExtra("Username:", username);
+                        i.putExtra("USERNAME", username);
                         startActivity(i);
                     }
                     // Else, give user an error message
