@@ -15,7 +15,6 @@
             android:layout_height="25dp"
             android:id="@+id/progressBar"
             android:layout_gravity="center_horizontal|top"
-            android:progress="40"
             android:indeterminate="false"
             android:layout_marginTop="50dp" />
 
@@ -122,7 +121,7 @@
             <Button
                 android:layout_width="269dp"
                 android:layout_height="62dp"
-                android:text="+add a prescription"
+                android:text="+add a playscription"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:textStyle="normal"
                 android:id="@+id/add_prescription"

@@ -9,8 +9,12 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.parse.GetCallback;
 import com.parse.ParseObject;
 import com.parse.ParseQuery;
+
+import org.json.JSONArray;
+import org.json.JSONException;
 
 import java.text.ParseException;
 
@@ -37,6 +41,7 @@ public class LogActivityActivity extends Activity {
                 String activityType = activityEditText.getText().toString().trim();
                 String durationString = durationEditText.getText().toString().trim();
                 int duration;
+                int durationTotal = 0;
                 try {
                     duration = Integer.parseInt(durationString);
                 } catch (Exception e) {
@@ -49,6 +54,24 @@ public class LogActivityActivity extends Activity {
                 activities.whereEqualTo("username", curUser);
 
                 try {
+                    boolean activityExists = false;
+                    JSONArray activityStrings = activities.getFirst().fetch().getJSONArray("ActivityType");
+                    JSONArray activityInts = activities.getFirst().fetch().getJSONArray("Durations");
+                    for (int i = 0; i < activityStrings.length(); i++) {
+                        try {
+                            durationTotal += activityInts.getInt(i);
+                            if (activityStrings.getString(i).equals(activityType)) {
+                                activityExists = true;
+                            }
+                        } catch (JSONException jse) {
+                            jse.printStackTrace();
+                        }
+                    }
+                    if (!activityExists) {
+                        Toast.makeText(LogActivityActivity.this,
+                                "The activity you input does not match your playscription.", Toast.LENGTH_LONG).show();
+                        return;
+                    }
                     activities.getFirst().fetch().add("ActivityType", activityType);
                     activities.getFirst().fetch().add("Durations", duration);
                     activities.getFirst().saveInBackground();
@@ -62,6 +85,8 @@ public class LogActivityActivity extends Activity {
 //                activity.saveInBackground();
                 Intent intent = new Intent(LogActivityActivity.this, DashboardActivity.class);
                 intent.putExtra("USERNAME", curUser);
+                durationTotal += duration;
+                intent.putExtra("durationTotal",durationTotal);
                 startActivity(intent);
             }
         });

@@ -18,9 +18,19 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.support.v4.widget.DrawerLayout;
 import android.widget.ArrayAdapter;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Button;
 import android.util.Log;
+import android.widget.Toast;
+
+import com.parse.ParseObject;
+import com.parse.ParseQuery;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+
+import java.text.ParseException;
 
 
 public class DashboardActivity extends ActionBarActivity
@@ -35,6 +45,7 @@ public class DashboardActivity extends ActionBarActivity
      * Used to store the last screen title. For use in {@link #restoreActionBar()}.
      */
     private CharSequence mTitle;
+    private ProgressBar progressBar;
     private Button viewStatsbutton;
     private Button logWeightbutton;
     private Button logActivitybutton;
@@ -43,6 +54,7 @@ public class DashboardActivity extends ActionBarActivity
     private String activityType;
     private int duration;
     private int frequency;
+    private int durationTotal;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,6 +62,29 @@ public class DashboardActivity extends ActionBarActivity
         setContentView(R.layout.dashboard_layout);
 
         username = getIntent().getStringExtra("USERNAME");
+        durationTotal = getIntent().getIntExtra("durationTotal",-1);
+        if (durationTotal >= 300) {
+            durationTotal = 300;
+            Toast.makeText(DashboardActivity.this, "Congratulations! You have reached 300 points!",
+                    Toast.LENGTH_LONG).show();
+        }
+        if (durationTotal == -1) {
+            durationTotal = 0;
+            ParseQuery<ParseObject> activities = ParseQuery.getQuery("Activity");
+            activities.whereEqualTo("username", username);
+            try {
+                JSONArray activityInts = activities.getFirst().fetch().getJSONArray("Durations");
+                for (int i = 0; i < activityInts.length(); i++) {
+                    try {
+                        durationTotal += activityInts.getInt(i);
+                    } catch (JSONException jse) {
+                        jse.printStackTrace();
+                    }
+                }
+            } catch (com.parse.ParseException pe) {
+                pe.printStackTrace();
+            }
+        }
 
         final Context context = this;
 
@@ -101,6 +136,16 @@ public class DashboardActivity extends ActionBarActivity
                 startActivity(i);
             }
         });
+
+        progressBar = (ProgressBar) findViewById(R.id.progressBar);
+        progressBar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(DashboardActivity.this,"Progress: " + durationTotal + "/300",Toast.LENGTH_LONG).show();
+            }
+        });
+        int percentage = (durationTotal/300) * 100;
+        progressBar.setProgress(percentage);
 
     }
 
