@@ -123,9 +123,6 @@ public class EnterPlayscriptionActivity extends ActionBarActivity {
                 playscription.saveInBackground();
                 Intent intent = new Intent(EnterPlayscriptionActivity.this, DashboardActivity.class);
                 intent.putExtra("USERNAME", curUser);
-//                intent.putExtra("ACTIVITY TYPE", activityType);
-//                intent.putExtra("DURATION", duration);
-//                intent.putExtra("FREQUENCY", frequency);
                 startActivity(intent);
             }
         });

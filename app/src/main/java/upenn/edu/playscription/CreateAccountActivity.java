@@ -34,8 +34,6 @@ public class CreateAccountActivity extends ActionBarActivity {
 
         setContentView(R.layout.activity_create_account);
 
-//        // Enable Local Datastore.
-//        Parse.enableLocalDatastore(this);
 
         Parse.initialize(this, "8SD5YOQ9WTDsThTnsG5vRaaZptHqpcYdz6tLelQp", "HhBMNz9uLujfeLtnAxrnrJ9sa9KMgvqmDq7w664l");
 
@@ -100,50 +98,19 @@ public class CreateAccountActivity extends ActionBarActivity {
             return;
         }
 
-        // Set up a progress dialog
-//        final ProgressDialog dialog = new ProgressDialog(CreateAccountActivity.this);
-//        dialog.setMessage(getString(R.string.progress_signup));
-//        dialog.show();
 
         // Set up a new Parse user
         ParseObject user = new ParseObject("User");
         user.put("username", username);
         user.put("password", password);
-//        user.put("dateToWeight", map);
-        user.saveInBackground();
-//        Toast.makeText(CreateAccountActivity.this, "Account created", Toast.LENGTH_LONG).show();
-//        user.saveInBackground(new SaveCallback() {
-//            @Override
-//            public void done(ParseException e) {
-//                dialog.dismiss();
-//                if (e != null) {
-//                    // Show the error message
-//                    Toast.makeText(CreateAccountActivity.this, e.getMessage(), Toast.LENGTH_LONG).show();
-//                } else {
-                    // Start an intent for the dispatch activity
-                    Intent intent = new Intent(CreateAccountActivity.this, DashboardActivity.class);
-                    intent.putExtra("USERNAME", username);
-//                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
-                    startActivity(intent);
-//                }
-//            }
-//        });
 
-        // Call the Parse signup method
-//        user.signUpInBackground(new SignUpCallback() {
-//            @Override
-//            public void done(ParseException e) {
-//                dialog.dismiss();
-//                if (e != null) {
-//                    // Show the error message
-//                    Toast.makeText(CreateAccountActivity.this, e.getMessage(), Toast.LENGTH_LONG).show();
-//                } else {
-//                    // Start an intent for the dispatch activity
-////                    Intent intent = new Intent(CreateAccountActivity.this, DashboardActivity.class);
-////                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
-////                    startActivity(intent);
-//                }
-//            }
-//        });
+        user.saveInBackground();
+
+        // Start an intent for the dispatch activity
+        Intent intent = new Intent(CreateAccountActivity.this, DashboardActivity.class);
+        intent.putExtra("USERNAME", username);
+
+        startActivity(intent);
+
     }
 }
