@@ -9,6 +9,9 @@ import android.widget.Button;
 import android.widget.EditText;
 
 import com.parse.ParseObject;
+import com.parse.ParseQuery;
+
+import java.text.ParseException;
 
 /**
  * Created by Drew on 4/28/2015.
@@ -33,11 +36,22 @@ public class LogActivityActivity extends Activity {
                 String activityType = activityEditText.getText().toString().trim();
                 String durationString = durationEditText.getText().toString().trim();
                 int duration = Integer.parseInt(durationString);
-                ParseObject activity = new ParseObject("Activity");
-                activity.put("username", curUser);
-                activity.put("ActivityType", activityType);
-                activity.put("TimeCompleted", duration);
-                activity.saveInBackground();
+
+                ParseQuery<ParseObject> activities = ParseQuery.getQuery("Activity");
+                activities.whereEqualTo("username", curUser);
+
+                try {
+                    activities.getFirst().fetch().add("ActivityType", activityType);
+                    activities.getFirst().fetch().add("Durations", duration);
+                    activities.getFirst().saveInBackground();
+                }
+                catch (com.parse.ParseException e) {
+                    e.printStackTrace();
+                }
+//                activity.put("username", curUser);
+//                activity.add("ActivityType", activityType);
+//                activity.add("Durations", duration);
+//                activity.saveInBackground();
                 Intent intent = new Intent(LogActivityActivity.this, DashboardActivity.class);
                 intent.putExtra("USERNAME", curUser);
                 startActivity(intent);
