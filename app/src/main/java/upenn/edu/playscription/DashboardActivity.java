@@ -50,6 +50,7 @@ public class DashboardActivity extends ActionBarActivity
     private Button logWeightbutton;
     private Button logActivitybutton;
     private Button addPrescriptionButton;
+    private TextView currPrescription;
     private String username;
     private String activityType;
     private int duration;
@@ -146,6 +147,23 @@ public class DashboardActivity extends ActionBarActivity
         });
         int percentage = (int) ((durationTotal/300.0) * 100.0);
         progressBar.setProgress(percentage);
+
+        currPrescription = (TextView) findViewById(R.id.currPrescription);
+        String text = "";
+        try {
+            ParseQuery<ParseObject> users = ParseQuery.getQuery("Playscription");
+            users.whereEqualTo("username", username);
+            text += "\n" + users.getFirst().fetch().getString("activityType") + " for "
+                    + users.getFirst().fetch().getInt("duration") + " minutes, " +
+                      users.getFirst().fetch().getInt("frequency") + "x per week";
+
+            currPrescription.setText(text);
+        }
+        catch (Exception e) {
+            Toast toast = Toast.makeText(context, "Database error", Toast.LENGTH_LONG);
+            toast.show();
+            e.printStackTrace();
+        }
 
     }
 
