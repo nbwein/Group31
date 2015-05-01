@@ -6,14 +6,14 @@
     <com.jjoe64.graphview.GraphView
         android:layout_width="match_parent"
         android:layout_height="200dip"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="30dp"
         android:id="@+id/lineGraph"/>
 
     <com.jjoe64.graphview.GraphView
         android:layout_width="match_parent"
         android:layout_centerHorizontal="true"
         android:layout_height="200dip"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="35dp"
         android:layout_below="@+id/lineGraph"
         android:id="@+id/barGraph"/>
 

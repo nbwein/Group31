@@ -86,6 +86,7 @@ public class StatsActivity extends ActionBarActivity {
         // add points to graph
         LineGraphSeries<DataPoint> series = new LineGraphSeries<>(points);
         GraphView lineGraph = (GraphView) findViewById(R.id.lineGraph);
+        lineGraph.setTitle("Weights");
         lineGraph.addSeries(series);
 
         // set date label formatter
