@@ -40,6 +40,9 @@ public class DashboardActivity extends ActionBarActivity
     private Button logActivitybutton;
     private Button addPrescriptionButton;
     private String username;
+    private String activityType;
+    private int duration;
+    private int frequency;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
