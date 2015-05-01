@@ -144,7 +144,7 @@ public class DashboardActivity extends ActionBarActivity
                 Toast.makeText(DashboardActivity.this,"Progress: " + durationTotal + "/300",Toast.LENGTH_LONG).show();
             }
         });
-        int percentage = (durationTotal/300) * 100;
+        int percentage = (int) ((durationTotal/300.0) * 100.0);
         progressBar.setProgress(percentage);
 
     }
