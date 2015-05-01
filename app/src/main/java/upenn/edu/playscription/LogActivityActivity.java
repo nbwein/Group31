@@ -7,6 +7,7 @@ import android.support.v7.app.ActionBarActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.parse.ParseObject;
 import com.parse.ParseQuery;
@@ -35,7 +36,14 @@ public class LogActivityActivity extends Activity {
             public void onClick(View view) {
                 String activityType = activityEditText.getText().toString().trim();
                 String durationString = durationEditText.getText().toString().trim();
-                int duration = Integer.parseInt(durationString);
+                int duration;
+                try {
+                    duration = Integer.parseInt(durationString);
+                } catch (Exception e) {
+                    Toast.makeText(LogActivityActivity.this, "Please give a duration number in minutes.", Toast.LENGTH_LONG)
+                            .show();
+                    return;
+                }
 
                 ParseQuery<ParseObject> activities = ParseQuery.getQuery("Activity");
                 activities.whereEqualTo("username", curUser);

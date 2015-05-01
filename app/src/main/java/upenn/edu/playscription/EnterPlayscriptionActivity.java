@@ -32,8 +32,28 @@ public class EnterPlayscriptionActivity extends ActionBarActivity {
                 String activityType = activityEditText.getText().toString().trim();
                 String durationString = durationEditText.getText().toString().trim();
                 String frequencyString = frequencyEditText.getText().toString().trim();
-                int duration = Integer.parseInt(durationString);
-                int frequency = Integer.parseInt(frequencyString);
+                int duration;
+                int frequency;
+                if (activityType.equals("") || durationString.equals("") || frequencyString.equals("")) {
+                    Toast.makeText(EnterPlayscriptionActivity.this, "Please fill in all fields.", Toast.LENGTH_LONG)
+                            .show();
+                    return;
+                }
+                try {
+                    duration = Integer.parseInt(durationString);
+
+                } catch (Exception e) {
+                    Toast.makeText(EnterPlayscriptionActivity.this, "Please give a duration number in minutes.", Toast.LENGTH_LONG)
+                            .show();
+                    return;
+                }
+                try {
+                    frequency = Integer.parseInt(frequencyString);
+                } catch (Exception e) {
+                    Toast.makeText(EnterPlayscriptionActivity.this, "Please input frequency as a number of times done per week.", Toast.LENGTH_LONG)
+                            .show();
+                    return;
+                }
                 ParseObject playscription = new ParseObject("Playscription");
                 playscription.put("username", curUser);
                 playscription.put("activityType", activityType);
