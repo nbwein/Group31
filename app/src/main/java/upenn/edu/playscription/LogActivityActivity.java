@@ -67,11 +67,11 @@ public class LogActivityActivity extends Activity {
                             jse.printStackTrace();
                         }
                     }
-                    if (!activityExists) {
-                        Toast.makeText(LogActivityActivity.this,
-                                "The activity you input does not match your playscription.", Toast.LENGTH_LONG).show();
-                        return;
-                    }
+//                    if (!activityExists) {
+//                        Toast.makeText(LogActivityActivity.this,
+//                                "The activity you input does not match your playscription.", Toast.LENGTH_LONG).show();
+//                        return;
+//                    }
                     activities.getFirst().fetch().add("ActivityType", activityType);
                     activities.getFirst().fetch().add("Durations", duration);
                     activities.getFirst().saveInBackground();
