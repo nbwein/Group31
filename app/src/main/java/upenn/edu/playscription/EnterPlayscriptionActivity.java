@@ -16,6 +16,7 @@ public class EnterPlayscriptionActivity extends ActionBarActivity {
     private EditText activityEditText;
     private EditText durationEditText;
     private EditText frequencyEditText;
+    private EditText playscriptionCodeEditText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +26,7 @@ public class EnterPlayscriptionActivity extends ActionBarActivity {
         activityEditText = (EditText) findViewById(R.id.activity_type);
         durationEditText = (EditText) findViewById(R.id.duration);
         frequencyEditText = (EditText) findViewById(R.id.frequency);
+        playscriptionCodeEditText = (EditText) findViewById(R.id.playscription_code);
 
         Button submit = (Button) findViewById(R.id.submit_playscription);
         submit.setOnClickListener(new View.OnClickListener() {
@@ -32,27 +34,85 @@ public class EnterPlayscriptionActivity extends ActionBarActivity {
                 String activityType = activityEditText.getText().toString().trim();
                 String durationString = durationEditText.getText().toString().trim();
                 String frequencyString = frequencyEditText.getText().toString().trim();
+                String playscriptionCodeString = playscriptionCodeEditText.getText().toString().trim();
                 int duration;
                 int frequency;
-                if (activityType.equals("") || durationString.equals("") || frequencyString.equals("")) {
-                    Toast.makeText(EnterPlayscriptionActivity.this, "Please fill in all fields.", Toast.LENGTH_LONG)
-                            .show();
-                    return;
+                if(playscriptionCodeString.length() == 5)
+                {
+                    String activitySubstring = playscriptionCodeString.substring(0, 2);
+                    String durationSubstring = playscriptionCodeString.substring(2, 4);
+                    String freqSubstring = playscriptionCodeString.substring(4,5);
+                    duration = Integer.parseInt(durationSubstring);
+                    frequency = Integer.parseInt(freqSubstring);
+                    if(activitySubstring.equals("01"))
+                    {
+                        activityType = "Running";
+                    }
+                    else if(activitySubstring.equals("02"))
+                    {
+                        activityType = "Playing sports";
+                    }
+                    else if(activitySubstring.equals("03"))
+                    {
+                        activityType = "Swimming";
+                    }
+                    else if(activitySubstring.equals("04"))
+                    {
+                        activityType = "Playing on a playground";
+                    }
+                    else if(activitySubstring.equals("05"))
+                    {
+                        activityType = "Playing basketball";
+                    }
+                    else if(activitySubstring.equals("06"))
+                    {
+                        activityType = "Playing football";
+                    }
+                    else if(activitySubstring.equals("07"))
+                    {
+                        activityType = "Playing soccer";
+                    }
+                    else if(activitySubstring.equals("08"))
+                    {
+                        activityType = "Playing baseball";
+                    }
+                    else if(activitySubstring.equals("09"))
+                    {
+                        activityType = "Go for a walk";
+                    }
+                    else if(activitySubstring.equals("10"))
+                    {
+                        activityType = "Go biking";
+                    }
+                    else
+                    {
+                        Toast.makeText(EnterPlayscriptionActivity.this, "Please enter a valid Playscription code", Toast.LENGTH_LONG)
+                                .show();
+                        return;
+                    }
                 }
-                try {
-                    duration = Integer.parseInt(durationString);
 
-                } catch (Exception e) {
-                    Toast.makeText(EnterPlayscriptionActivity.this, "Please give a duration number in minutes.", Toast.LENGTH_LONG)
-                            .show();
-                    return;
-                }
-                try {
-                    frequency = Integer.parseInt(frequencyString);
-                } catch (Exception e) {
-                    Toast.makeText(EnterPlayscriptionActivity.this, "Please input frequency as a number of times done per week.", Toast.LENGTH_LONG)
-                            .show();
-                    return;
+                else {
+                    if (activityType.equals("") || durationString.equals("") || frequencyString.equals("")) {
+                        Toast.makeText(EnterPlayscriptionActivity.this, "Please fill in all fields.", Toast.LENGTH_LONG)
+                                .show();
+                        return;
+                    }
+                    try {
+                        duration = Integer.parseInt(durationString);
+
+                    } catch (Exception e) {
+                        Toast.makeText(EnterPlayscriptionActivity.this, "Please give a duration number in minutes.", Toast.LENGTH_LONG)
+                                .show();
+                        return;
+                    }
+                    try {
+                        frequency = Integer.parseInt(frequencyString);
+                    } catch (Exception e) {
+                        Toast.makeText(EnterPlayscriptionActivity.this, "Please input frequency as a number of times done per week.", Toast.LENGTH_LONG)
+                                .show();
+                        return;
+                    }
                 }
                 ParseObject playscription = new ParseObject("Playscription");
                 playscription.put("username", curUser);
