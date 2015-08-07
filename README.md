@@ -1,4 +1,4 @@
-# Group31
+# Playscription
 Playscription codes are a 5 digit number. The first 2 digits correspond to the activity type, 2 digits after that correspond to the duration of the activity (in minutes) and the last digit of the code corresponds to the frequency (how many days per week) of the activity.
 
 As of now, the codes for each activity type (the first 2 digits of the playscription code) are mapped as follows:
