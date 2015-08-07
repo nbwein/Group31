@@ -2,53 +2,53 @@
 <items version="2" >
 
     <item
-        jar="/Users/Nick/Documents/Sophomore/CIS 350/Playscription/Group31/app/build/intermediates/exploded-aar/com.jjoe64/graphview/4.0.0/classes.jar"
+        jar="/Users/Nick/Documents/Sophomore/CIS 350/Playscription/Playscription/app/build/intermediates/exploded-aar/com.jjoe64/graphview/4.0.0/classes.jar"
         jumboMode="false"
         revision="21.1.2"
         sha1="ae24ad61a573cd1faf8261f5ec6d8f0cb58ddaad">
-        <dex dex="/Users/Nick/Documents/Sophomore/CIS 350/Playscription/Group31/app/build/intermediates/pre-dexed/debug/classes-fb2e53a8feef81260b6ba1c4884c66ca6d087f56.jar" />
+        <dex dex="/Users/Nick/Documents/Sophomore/CIS 350/Playscription/Playscription/app/build/intermediates/pre-dexed/debug/classes-fb2e53a8feef81260b6ba1c4884c66ca6d087f56.jar" />
     </item>
     <item
-        jar="/Users/Nick/Documents/Sophomore/CIS 350/Playscription/Group31/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/classes.jar"
+        jar="/Users/Nick/Documents/Sophomore/CIS 350/Playscription/Playscription/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/classes.jar"
         jumboMode="false"
         revision="21.1.2"
         sha1="2c91c949a45a21cdecf26e03951e46c7beec9ad8">
-        <dex dex="/Users/Nick/Documents/Sophomore/CIS 350/Playscription/Group31/app/build/intermediates/pre-dexed/debug/classes-8a581ec935244c59c693f960900b95c1842a2e64.jar" />
+        <dex dex="/Users/Nick/Documents/Sophomore/CIS 350/Playscription/Playscription/app/build/intermediates/pre-dexed/debug/classes-8a581ec935244c59c693f960900b95c1842a2e64.jar" />
     </item>
     <item
         jar="/Users/Nick/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/21.0.3/support-annotations-21.0.3.jar"
         jumboMode="false"
         revision="21.1.2"
         sha1="4b74cefe1f0c1b819e7260c8627a14674e37fd35">
-        <dex dex="/Users/Nick/Documents/Sophomore/CIS 350/Playscription/Group31/app/build/intermediates/pre-dexed/debug/support-annotations-21.0.3-7f3b0b33bc8717a2bd2f9021e3c391db876831d5.jar" />
+        <dex dex="/Users/Nick/Documents/Sophomore/CIS 350/Playscription/Playscription/app/build/intermediates/pre-dexed/debug/support-annotations-21.0.3-7f3b0b33bc8717a2bd2f9021e3c391db876831d5.jar" />
     </item>
     <item
-        jar="/Users/Nick/Documents/Sophomore/CIS 350/Playscription/Group31/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/libs/internal_impl-21.0.3.jar"
+        jar="/Users/Nick/Documents/Sophomore/CIS 350/Playscription/Playscription/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/libs/internal_impl-21.0.3.jar"
         jumboMode="false"
         revision="21.1.2"
         sha1="01ec05bfbafcc07646ba813000bf2ef11742dd03">
-        <dex dex="/Users/Nick/Documents/Sophomore/CIS 350/Playscription/Group31/app/build/intermediates/pre-dexed/debug/internal_impl-21.0.3-7f2f1f36e5f51300db64b386743dc333a313d974.jar" />
+        <dex dex="/Users/Nick/Documents/Sophomore/CIS 350/Playscription/Playscription/app/build/intermediates/pre-dexed/debug/internal_impl-21.0.3-7f2f1f36e5f51300db64b386743dc333a313d974.jar" />
     </item>
     <item
-        jar="/Users/Nick/Documents/Sophomore/CIS 350/Playscription/Group31/app/libs/Parse-1.9.0.jar"
+        jar="/Users/Nick/Documents/Sophomore/CIS 350/Playscription/Playscription/app/libs/Parse-1.9.0.jar"
         jumboMode="false"
         revision="21.1.2"
         sha1="5811138d4e6cb9d45030e133ef1a61b935154c3a">
-        <dex dex="/Users/Nick/Documents/Sophomore/CIS 350/Playscription/Group31/app/build/intermediates/pre-dexed/debug/Parse-1.9.0-a7317c2fd16edb3279614da0076ed01145d73c0f.jar" />
+        <dex dex="/Users/Nick/Documents/Sophomore/CIS 350/Playscription/Playscription/app/build/intermediates/pre-dexed/debug/Parse-1.9.0-a7317c2fd16edb3279614da0076ed01145d73c0f.jar" />
     </item>
     <item
-        jar="/Users/Nick/Documents/Sophomore/CIS 350/Playscription/Group31/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/classes.jar"
+        jar="/Users/Nick/Documents/Sophomore/CIS 350/Playscription/Playscription/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/classes.jar"
         jumboMode="false"
         revision="21.1.2"
         sha1="81d42bf983a8741f4888a6e333e454e4a5e0eeb7">
-        <dex dex="/Users/Nick/Documents/Sophomore/CIS 350/Playscription/Group31/app/build/intermediates/pre-dexed/debug/classes-8df5fea99ca0a44af66ef04b1a0caa90407472d4.jar" />
+        <dex dex="/Users/Nick/Documents/Sophomore/CIS 350/Playscription/Playscription/app/build/intermediates/pre-dexed/debug/classes-8df5fea99ca0a44af66ef04b1a0caa90407472d4.jar" />
     </item>
     <item
-        jar="/Users/Nick/Documents/Sophomore/CIS 350/Playscription/Group31/app/libs/bolts-android-1.1.4.jar"
+        jar="/Users/Nick/Documents/Sophomore/CIS 350/Playscription/Playscription/app/libs/bolts-android-1.1.4.jar"
         jumboMode="false"
         revision="21.1.2"
         sha1="129874135e6081269ace2312092031558865de12">
-        <dex dex="/Users/Nick/Documents/Sophomore/CIS 350/Playscription/Group31/app/build/intermediates/pre-dexed/debug/bolts-android-1.1.4-0564ad8524f728291bfd3e1e145ebd3af2ce5c45.jar" />
+        <dex dex="/Users/Nick/Documents/Sophomore/CIS 350/Playscription/Playscription/app/build/intermediates/pre-dexed/debug/bolts-android-1.1.4-0564ad8524f728291bfd3e1e145ebd3af2ce5c45.jar" />
     </item>
 
 </items>
