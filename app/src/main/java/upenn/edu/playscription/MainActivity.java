@@ -26,8 +26,8 @@ public class MainActivity extends ActionBarActivity {
 
         // Enable local datastore and initialize Parse.
         Parse.enableLocalDatastore(this);
-        Parse.initialize(this, "8SD5YOQ9WTDsThTnsG5vRaaZptHqpcYdz6tLelQp", 
-            "HhBMNz9uLujfeLtnAxrnrJ9sa9KMgvqmDq7w664l");
+        Parse.initialize(this, "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx");
 
         final Context context = this;
 

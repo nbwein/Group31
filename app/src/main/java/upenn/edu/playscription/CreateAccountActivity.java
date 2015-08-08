@@ -35,7 +35,8 @@ public class CreateAccountActivity extends ActionBarActivity {
         setContentView(R.layout.activity_create_account);
 
 
-        Parse.initialize(this, "8SD5YOQ9WTDsThTnsG5vRaaZptHqpcYdz6tLelQp", "HhBMNz9uLujfeLtnAxrnrJ9sa9KMgvqmDq7w664l");
+        Parse.initialize(this, "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+                "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx");
 
         // Set up the signup form.
         usernameEditText = (EditText) findViewById(R.id.username);

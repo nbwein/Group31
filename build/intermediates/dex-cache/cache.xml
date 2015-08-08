@@ -6,6 +6,7 @@
         jumboMode="false"
         revision="21.1.2"
         sha1="ae24ad61a573cd1faf8261f5ec6d8f0cb58ddaad">
+<<<<<<< Updated upstream
         <dex dex="/Users/Nick/Documents/Sophomore/CIS 350/Playscription/Playscription/app/build/intermediates/pre-dexed/debug/classes-fb2e53a8feef81260b6ba1c4884c66ca6d087f56.jar" />
     </item>
     <item
@@ -14,11 +15,22 @@
         revision="21.1.2"
         sha1="2c91c949a45a21cdecf26e03951e46c7beec9ad8">
         <dex dex="/Users/Nick/Documents/Sophomore/CIS 350/Playscription/Playscription/app/build/intermediates/pre-dexed/debug/classes-8a581ec935244c59c693f960900b95c1842a2e64.jar" />
+=======
+        <dex dex="/Users/Nick/Documents/Sophomore/CIS 350/Playscription/Playscription/app/build/intermediates/pre-dexed/debug/classes-0680c9853d22bda9a07ee29f483be6c418b8215e.jar" />
     </item>
     <item
-        jar="/Users/Nick/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/21.0.3/support-annotations-21.0.3.jar"
+        jar="/Users/Nick/Documents/Sophomore/CIS 350/Playscription/Playscription/app/libs/bolts-android-1.1.4.jar"
         jumboMode="false"
         revision="21.1.2"
+        sha1="129874135e6081269ace2312092031558865de12">
+        <dex dex="/Users/Nick/Documents/Sophomore/CIS 350/Playscription/Playscription/app/build/intermediates/pre-dexed/debug/bolts-android-1.1.4-361060e4a04316b8cf81e09e4f93bba47ee4b0ad.jar" />
+>>>>>>> Stashed changes
+    </item>
+    <item
+        jar="/Users/Nick/Documents/Sophomore/CIS 350/Playscription/Playscription/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/libs/internal_impl-21.0.3.jar"
+        jumboMode="false"
+        revision="21.1.2"
+<<<<<<< Updated upstream
         sha1="4b74cefe1f0c1b819e7260c8627a14674e37fd35">
         <dex dex="/Users/Nick/Documents/Sophomore/CIS 350/Playscription/Playscription/app/build/intermediates/pre-dexed/debug/support-annotations-21.0.3-7f3b0b33bc8717a2bd2f9021e3c391db876831d5.jar" />
     </item>
@@ -35,12 +47,31 @@
         revision="21.1.2"
         sha1="5811138d4e6cb9d45030e133ef1a61b935154c3a">
         <dex dex="/Users/Nick/Documents/Sophomore/CIS 350/Playscription/Playscription/app/build/intermediates/pre-dexed/debug/Parse-1.9.0-a7317c2fd16edb3279614da0076ed01145d73c0f.jar" />
+=======
+        sha1="01ec05bfbafcc07646ba813000bf2ef11742dd03">
+        <dex dex="/Users/Nick/Documents/Sophomore/CIS 350/Playscription/Playscription/app/build/intermediates/pre-dexed/debug/internal_impl-21.0.3-2168a788cd94bf623547b8314f7ac5ceec80e6fb.jar" />
+    </item>
+    <item
+        jar="/Users/Nick/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/21.0.3/support-annotations-21.0.3.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="4b74cefe1f0c1b819e7260c8627a14674e37fd35">
+        <dex dex="/Users/Nick/Documents/Sophomore/CIS 350/Playscription/Playscription/app/build/intermediates/pre-dexed/debug/support-annotations-21.0.3-7f3b0b33bc8717a2bd2f9021e3c391db876831d5.jar" />
+    </item>
+    <item
+        jar="/Users/Nick/Documents/Sophomore/CIS 350/Playscription/Playscription/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.3/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="2c91c949a45a21cdecf26e03951e46c7beec9ad8">
+        <dex dex="/Users/Nick/Documents/Sophomore/CIS 350/Playscription/Playscription/app/build/intermediates/pre-dexed/debug/classes-63d48c1b1e0290019151c586207bf744a682fb25.jar" />
+>>>>>>> Stashed changes
     </item>
     <item
         jar="/Users/Nick/Documents/Sophomore/CIS 350/Playscription/Playscription/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/classes.jar"
         jumboMode="false"
         revision="21.1.2"
         sha1="81d42bf983a8741f4888a6e333e454e4a5e0eeb7">
+<<<<<<< Updated upstream
         <dex dex="/Users/Nick/Documents/Sophomore/CIS 350/Playscription/Playscription/app/build/intermediates/pre-dexed/debug/classes-8df5fea99ca0a44af66ef04b1a0caa90407472d4.jar" />
     </item>
     <item
@@ -49,6 +80,16 @@
         revision="21.1.2"
         sha1="129874135e6081269ace2312092031558865de12">
         <dex dex="/Users/Nick/Documents/Sophomore/CIS 350/Playscription/Playscription/app/build/intermediates/pre-dexed/debug/bolts-android-1.1.4-0564ad8524f728291bfd3e1e145ebd3af2ce5c45.jar" />
+=======
+        <dex dex="/Users/Nick/Documents/Sophomore/CIS 350/Playscription/Playscription/app/build/intermediates/pre-dexed/debug/classes-5c7c0d12f166f9cffe54ec333f93304cc8823442.jar" />
+    </item>
+    <item
+        jar="/Users/Nick/Documents/Sophomore/CIS 350/Playscription/Playscription/app/libs/Parse-1.9.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="5811138d4e6cb9d45030e133ef1a61b935154c3a">
+        <dex dex="/Users/Nick/Documents/Sophomore/CIS 350/Playscription/Playscription/app/build/intermediates/pre-dexed/debug/Parse-1.9.0-a7fd4f542f909dc5b99ab54c50336e131680ce73.jar" />
+>>>>>>> Stashed changes
     </item>
 
 </items>

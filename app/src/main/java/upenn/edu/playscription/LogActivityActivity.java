@@ -18,9 +18,6 @@ import org.json.JSONException;
 
 import java.text.ParseException;
 
-/**
- * Created by Drew on 4/28/2015.
- */
 public class LogActivityActivity extends Activity {
     private String curUser;
     private EditText activityEditText;
@@ -67,11 +64,7 @@ public class LogActivityActivity extends Activity {
                             jse.printStackTrace();
                         }
                     }
-//                    if (!activityExists) {
-//                        Toast.makeText(LogActivityActivity.this,
-//                                "The activity you input does not match your playscription.", Toast.LENGTH_LONG).show();
-//                        return;
-//                    }
+
                     activities.getFirst().fetch().add("ActivityType", activityType);
                     activities.getFirst().fetch().add("Durations", duration);
                     activities.getFirst().saveInBackground();
@@ -79,10 +72,7 @@ public class LogActivityActivity extends Activity {
                 catch (com.parse.ParseException e) {
                     e.printStackTrace();
                 }
-//                activity.put("username", curUser);
-//                activity.add("ActivityType", activityType);
-//                activity.add("Durations", duration);
-//                activity.saveInBackground();
+
                 Intent intent = new Intent(LogActivityActivity.this, DashboardActivity.class);
                 intent.putExtra("USERNAME", curUser);
                 durationTotal += duration;

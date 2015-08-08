@@ -34,77 +34,77 @@
             android:onClick=""/>
 
         <TextView
-        android:layout_width="284dp"
-        android:layout_height="wrap_content"
-        android:id="@+id/text1"
-        android:text="@string/current_prescriptions"
-        android:textStyle="normal"
-        android:textColor="#5b070707"
+            android:layout_width="284dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/text1"
+            android:text="@string/current_prescriptions"
+            android:textStyle="normal"
+            android:textColor="#5b070707"
             android:width="150dp"
             android:height="40dp"
             android:textSize="30dp"
             android:layout_gravity="center"
             android:layout_marginBottom="90dp" />
 
-            <TextView
-                android:layout_width="135dp"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="last activity"
-                android:textStyle="normal"
-                android:id="@+id/textView"
-                android:layout_gravity="left|center_vertical"
-                android:textColor="#5b070707"
-                android:height="50dp"
-                android:width="100dp"
-                android:textSize="25dp"
-                android:layout_marginLeft="40dp"
-                android:layout_marginTop="25dp" />
+        <TextView
+            android:layout_width="135dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="last activity"
+            android:textStyle="normal"
+            android:id="@+id/textView"
+            android:layout_gravity="left|center_vertical"
+            android:textColor="#5b070707"
+            android:height="50dp"
+            android:width="100dp"
+            android:textSize="25dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="25dp" />
 
-            <TextView
-                android:layout_width="133dp"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="weight log"
-                android:textStyle="normal"
-                android:id="@+id/textView2"
-                android:layout_gravity="right|center_vertical"
-                android:textColor="#5b070707"
-                android:height="50dp"
-                android:width="100dp"
-                android:textSize="25dp"
-                android:layout_marginRight="25dp"
-                android:layout_marginTop="25dp"/>
+        <TextView
+            android:layout_width="133dp"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="weight log"
+            android:textStyle="normal"
+            android:id="@+id/textView2"
+            android:layout_gravity="right|center_vertical"
+            android:textColor="#5b070707"
+            android:height="50dp"
+            android:width="100dp"
+            android:textSize="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginTop="25dp"/>
 
-            <Button
-                style="?android:attr/buttonStyleSmall"
-                android:layout_width="wrap_content"
-                android:layout_height="18dp"
-                android:text="+log activity"
-                android:textAppearance="?android:attr/textAppearanceSmall"
-                android:textStyle="normal"
-                android:id="@+id/log_activity"
-                android:layout_gravity="left|center_vertical"
-                android:layout_marginTop="45dp"
-                android:layout_marginLeft="50dp"
-                android:background="#ffffdb4a"
-                android:width="100dp"
-                android:height="5dp" />
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="18dp"
+            android:text="+log activity"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textStyle="normal"
+            android:id="@+id/log_activity"
+            android:layout_gravity="left|center_vertical"
+            android:layout_marginTop="45dp"
+            android:layout_marginLeft="50dp"
+            android:background="#ffffdb4a"
+            android:width="100dp"
+            android:height="5dp" />
 
-            <Button
-                style="?android:attr/buttonStyleSmall"
-                android:layout_width="wrap_content"
-                android:layout_height="18dp"
-                android:text="+log weight"
-                android:textAppearance="?android:attr/textAppearanceSmall"
-                android:textStyle="normal"
-                android:id="@+id/log_weight"
-                android:layout_gravity="right|center_vertical"
-                android:layout_marginTop="45dp"
-                android:layout_marginRight="50dp"
-                android:background="#ffffdb4a"
-                android:width="100dp"
-                android:height="5dp" />
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="18dp"
+            android:text="+log weight"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textStyle="normal"
+            android:id="@+id/log_weight"
+            android:layout_gravity="right|center_vertical"
+            android:layout_marginTop="45dp"
+            android:layout_marginRight="50dp"
+            android:background="#ffffdb4a"
+            android:width="100dp"
+            android:height="5dp" />
 
         <Button
             android:layout_width="269dp"
@@ -118,25 +118,27 @@
             android:textSize="20dp" />
 
 
-            <Button
-                android:layout_width="269dp"
-                android:layout_height="62dp"
-                android:text="+add a playscription"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:textStyle="normal"
-                android:id="@+id/add_prescription"
-                android:layout_gravity="center_horizontal|bottom"
-                android:layout_marginBottom="40dp"
-                android:textSize="20dp" />
+        <Button
+            android:layout_width="269dp"
+            android:layout_height="62dp"
+            android:text="+add a playscription"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textStyle="normal"
+            android:id="@+id/add_prescription"
+            android:layout_gravity="center_horizontal|bottom"
+            android:layout_marginBottom="40dp"
+            android:textSize="20dp" />
 
         <TextView
-            android:layout_width="260dp"
+            android:layout_width="240dp"
             android:layout_height="79dp"
+            android:width="150dp"
+            android:height="40dp"
+            android:textSize="15dp"
             android:id="@+id/currPrescription"
             android:layout_marginBottom="35dp"
             android:layout_centerHorizontal="true"
             android:layout_gravity="center" />
-
 
     </FrameLayout>
 

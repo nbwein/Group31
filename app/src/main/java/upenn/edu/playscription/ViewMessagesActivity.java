@@ -30,8 +30,8 @@ public class ViewMessagesActivity extends ActionBarActivity {
         final String username = getIntent().getStringExtra("USERNAME");
 
         // Initialize Parse
-        Parse.initialize(this, "8SD5YOQ9WTDsThTnsG5vRaaZptHqpcYdz6tLelQp", 
-            "HhBMNz9uLujfeLtnAxrnrJ9sa9KMgvqmDq7w664l");
+        Parse.initialize(this, "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+            "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx");
 
         final Context context = this;
 
